@@ -9,7 +9,7 @@ body{
     top: 0px;
     background-color: aliceblue;
     box-shadow: 1px 1px 7px rgb(104, 103, 103);
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Carrousel*/
@@ -38,16 +38,14 @@ body{
     transition: 1s;
     filter: brightness(110%);
     transform: scale(1.5);
-    z-index: 1;
+    z-index: 0;
 }
 
-.card-img-top {
-    object-fit: cover; /* Hace que la imagen cubra todo el contenedor manteniendo su relación de aspecto */
-  }
+
 
 .contenedorImage{
     overflow: hidden;
-    z-index: 2;
+    z-index: 0;
 }
 
 
