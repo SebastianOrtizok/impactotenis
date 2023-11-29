@@ -1,0 +1,44 @@
+body{
+    background-color:#F8F9FA;
+}
+
+/* Nav Bar*/
+.container-fluid {
+    position: fixed;
+    padding: 1rem;
+    top: 0px;
+    background-color: aliceblue;
+    box-shadow: 1px 1px 7px rgb(104, 103, 103);
+    z-index: 2;
+}
+
+/* Carrousel*/
+.carousel{
+    margin-top: 20px;
+    background-color:rgb(254, 247, 238);
+    z-index: 0;
+}
+
+.carousel img{
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
+}
+
+.ecommerce .card{
+    box-shadow: 1px 1px 7px rgb(148, 148, 148);
+}
+
+.ecommerce img{
+    border-radius: 10px;
+    max-height: 300px;
+    padding:2px 2px 2px 2px;
+}
+
+.card-img-top:hover{
+    transition: 1s;
+    filter: brightness(110%);
+    transform: scale(1.5);
+}
+
+
+
