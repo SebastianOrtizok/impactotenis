@@ -1,6 +1,6 @@
-import foto1 from '/public/Carrousel/foto1.jpg';
-import foto2 from '/public/Carrousel/foto2.jpg';
-import foto3 from '/public/Carrousel/foto3.jpg';
+import foto1 from '/src/Carrousel/foto1.jpg';
+import foto2 from '/src/Carrousel/foto2.jpg';
+import foto3 from '/src/Carrousel/foto3.jpg';
 
 export const Carrousel = () => {
     return (

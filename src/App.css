@@ -38,7 +38,36 @@ body{
     transition: 1s;
     filter: brightness(110%);
     transform: scale(1.5);
+    z-index: 1;
 }
 
+.card-img-top {
+    object-fit: cover; /* Hace que la imagen cubra todo el contenedor manteniendo su relación de aspecto */
+  }
+
+.contenedorImage{
+    overflow: hidden;
+    z-index: 2;
+}
+
+
+/* Popup Ecomerce*/
+.popup-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    z-index: 1000;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .popup-content {
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: auto;
+  }
+  
 
 
