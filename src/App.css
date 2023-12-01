@@ -1,3 +1,46 @@
+:root {
+    /* Colores principales */
+    --color-verde-tenis: #2ecc71; /* Fondo de secciones, botones destacados, etc. */
+    --color-blanco: #ffffff; /* Fondos principales, texto destacado */
+    --color-gris-claro: #ecf0f1; /* Fondos secundarios, separadores */
+  
+    /* Colores de acento */
+    --color-azul-cielo: #3498db; /* Detalles y acentos */
+    --color-naranja: #f39c12; /* Destacados y elementos de llamada a la acción */
+  
+    /* Color de texto */
+    --color-negro: #2c3e50; /* Texto principal */
+  
+    /* Fuentes y otros estilos de texto */
+    --fuente-principal: 'Arial', sans-serif; /* Puedes cambiar esto según tus preferencias de fuente */
+    --tamanio-texto: 16px; /* Tamaño base del texto */
+  
+    /* Otros estilos */
+    --radio-bordes: 8px; /* Radio de los bordes redondeados, ajusta según sea necesario */
+  }
+  /*
+  Aplicación de colores en diferentes elementos
+  body {
+    background-color: var(--color-blanco);
+    color: var(--color-negro);
+    font-family: var(--fuente-principal);
+    font-size: var(--tamanio-texto);
+  }
+  
+
+  .section-container {
+    background-color: var(--color-verde-tenis);
+    color: var(--color-blanco);
+  }
+  
+
+  .button-destacado {
+    background-color: var(--color-naranja);
+    color: var(--color-blanco);
+
+  }
+*/
+
 body{
     background-color:#F8F9FA;
 }
@@ -5,25 +48,45 @@ body{
 /* Nav Bar*/
 .container-fluid {
     position: fixed;
-    padding: 1rem;
+    padding: 0.5rem;
     top: 0px;
-    background-color: aliceblue;
+    background-color: #f39c12;
     box-shadow: 1px 1px 7px rgb(104, 103, 103);
     z-index: 3;
+}
+
+a {
+    color: #ecf0f1;
+    text-decoration: none;
+}
+
+a :hover{
+    color: black;
 }
 
 /* Carrousel*/
 .carousel{
     margin-top: 20px;
-    background-color:rgb(254, 247, 238);
+    background-color:var(--color-verde-tenis);
     z-index: 0;
 }
 
 .carousel img{
+    width: 100%;
     border-radius: 10px;
     box-shadow: 1px 1px 7px black;
 }
 
+.mx-auto{
+    overflow: hidden;
+}
+
+.carrouseltext{
+    text-shadow: 1px 1px 5px rgb(77, 77, 77);
+    color: var(--color-naranja)
+}
+
+/* e Commerce*/
 .ecommerce .card{
     box-shadow: 1px 1px 7px rgb(148, 148, 148);
 }
@@ -63,9 +126,33 @@ body{
   }
   
   .popup-content {
-    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    max-width: 100%; 
     margin: auto;
   }
   
 
 
+/* Componente pricipal*/ 
+
+.principal_section1 {
+    background-color: #2ecc71;
+    width: 100%;
+}
+.principal_section2 {
+    background-color: #ffffff;
+    width: 100%;
+    height: 800px;
+    overflow: scroll;
+
+}
+.principal_section3 {
+    background-color: #f39c12;
+    width: 100%;
+    height: 200px;
+}
+
+.principal_section3 {
+    background-color: var(--color-azul-cielo);
+    width: 100%;
+    height: 400px;
+}
