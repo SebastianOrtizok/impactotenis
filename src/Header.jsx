@@ -62,17 +62,19 @@ export const Header = () => {
 								</li>
 							</ul>
 						</li>
+						<li className="nav-item">
             <Link to="/juegos">
 					<li>
-						<i className="fa fa-home"></i> Juegos
+					<i className="fa fa-gamepad"></i> Juegos
 					</li>
 				</Link>
+				</li>
 						<li className="nav-item">
 							<a
 								className="nav-icon position-relative text-decoration-none"
 								href="micarrito.html"
 							>
-								<i className="fa fa-fw fa-cart-arrow-down text-dark mr-10 "></i>
+								<i className="fa-solid fa-cart-shopping"></i>
 								<span
 									className="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
 									id="estadoCarrito"
@@ -85,12 +87,12 @@ export const Header = () => {
 
 					<form className="d-flex" role="search">
 						<input
-							className="form-control me-2"
+							className="form-control me-2 header_buscar"
 							type="search"
 							placeholder="Search"
 							aria-label="Search"
 						/>
-						<button className="btn btn-outline-success" type="submit">
+						<button className="header_boton header_buscar" type="submit">
 							Search
 						</button>
 					</form>

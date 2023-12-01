@@ -4,7 +4,7 @@ import foto7 from '/src/Carrousel/foto7.jpg';
 
 export const Carrousel = () => {
     return (
-<div id="template-mo-zay-hero-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="8000">
+<div id="template-mo-zay-hero-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
     <ol className="carousel-indicators">
         <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" className="active"></li>
         <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="1"></li>
@@ -20,6 +20,7 @@ export const Carrousel = () => {
                     <div className="col-lg-6 mb-0 d-flex align-items-center">
                         <div className="text-align-center align-self-center">
                             <h1 className="h1 carrouseltext">Clases virtuales</h1>
+                            <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                 </div>
@@ -34,6 +35,7 @@ export const Carrousel = () => {
                     <div className="col-lg-6 mb-0 d-flex align-items-center">
                         <div className="text-align-center">
                             <h1 className="h1 carrouseltext">Tienda virtual</h1>
+                            <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                 </div>
@@ -49,6 +51,7 @@ export const Carrousel = () => {
                     <div className="col-lg-6 mb-0 d-flex align-items-center">
                         <div className="text-align-center">
                             <h1 className="h1 carrouseltext">Obtener resultados tangibles</h1>
+                            <p>Some representative placeholder content for the second slide.</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,6 @@
 import { Carrousel } from "./Carrousel";
 import { EcommerceIndex } from "./ecomerce/EcommerceIndex";
+import Youtube from "./Youtube";
 export const Principal = function () {
 
 	return (
@@ -10,7 +11,9 @@ export const Principal = function () {
 			</div>
 		</section>
 		<section>
-		<div className="principal_section3"></div>
+		<div className="principal_section3">
+			<Youtube/>
+		</div>
 
 		</section>
 		<section>

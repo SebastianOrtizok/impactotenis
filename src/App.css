@@ -56,12 +56,57 @@ body{
 }
 
 a {
-    color: #ecf0f1;
+    color: #ffffff;
     text-decoration: none;
 }
 
 a :hover{
-    color: black;
+    color: var(--color-azul-cielo);
+}
+
+.nav-icon {
+    font-size: 1.5rem;
+    padding: 1rem;
+    color:#3498db
+}
+
+.header_buscar {
+    box-shadow: 1px 3px 7px var(--color-azul-cielo);
+    background-color: rgb(249, 170, 43);
+    border: 1px solid white;
+    color: white;    
+}
+
+.header_buscar:hover{
+    background-color: var(--color-azul-cielo);
+}
+
+.header_buscar:focus {
+    background-color: var(--color-azul-cielo);
+    color: var(--color-blanco);
+    
+}
+
+.header_buscar::placeholder {
+    color: var(--color-blanco) 
+}
+.header_buscar {
+    color: var(--color-blanco) 
+}
+
+.header_boton {
+    background-color: rgb(249, 170, 43);
+    border-radius: 10px;
+    padding: 0.5rem;
+    color:white
+}
+
+.header_boton:active {
+    background-color:var(--color-verde-tenis)
+}
+
+.header_boton:hover {
+    color:white
 }
 
 /* Carrousel*/
@@ -82,6 +127,7 @@ a :hover{
 }
 
 .carrouseltext{
+    font-size: 5rem;
     text-shadow: 1px 1px 5px rgb(77, 77, 77);
     color: var(--color-naranja)
 }
@@ -155,4 +201,12 @@ a :hover{
     background-color: var(--color-azul-cielo);
     width: 100%;
     height: 400px;
+}
+
+
+
+@media (max-width: 768px) {
+    .h1.carrouseltext {
+        font-size: 3rem;
+       }
 }
