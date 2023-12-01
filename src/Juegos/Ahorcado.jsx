@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import './ahorcado.css'; 
-import ahorcado0 from "./img/ahorcado0.gif"
+// import ahorcado0 from "./img/ahorcado0.gif"
 // import ahorcado1 from "./img/ahorcado1.gif"
 // import ahorcado2 from "./img/ahorcado2.gif"
 // import ahorcado3 from "./img/ahorcado3.gif"
@@ -76,7 +76,7 @@ const Ahorcado = () => {
 
   return (
     <>
-<div className="contenedor">
+{/* <div className="contenedor">
         <header>
           <h1>Ahorcado de tenis</h1>
           <div className="informacion">
@@ -213,7 +213,7 @@ const Ahorcado = () => {
         <button type="text" id="reload" onClick={() => window.location.reload()}>
           Volver a Jugar
         </button>
-      </div>
+      </div> */}
     </>
   );
 }
