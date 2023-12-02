@@ -129,7 +129,7 @@ a :hover{
 .carrouseltext{
     font-size: 5rem;
     text-shadow: 1px 1px 5px rgb(77, 77, 77);
-    color: var(--color-naranja)
+    color: var(--color-blanco)
 }
 
 /* e Commerce*/
@@ -188,7 +188,7 @@ a :hover{
 
 /* La seccion 2*/
 .principal_section2 {
-    background-color: #ffffff;
+    background-color: var(--color-azul-cielo);
     width: 100%;
 }
 
@@ -216,11 +216,24 @@ a :hover{
 }
 
 /* Sección 3 */ 
-
 .principal_section3 {
-    background-color: var(--color-azul-cielo);
+    background-color: #ffffff;
     width: 100%;
 }
+
+/* Section 4*/
+.principal_section4 {
+    background-color: yellowgreen;
+    width: 100%;
+}
+
+.infoResultados {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo y máximo según tus necesidades */
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
 
 
 @media (max-width: 768px) {

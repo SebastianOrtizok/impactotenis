@@ -6,8 +6,8 @@ const Youtube = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiKey = 'AIzaSyADvoc7ahZXy8rNU6nk39lGT27nOaaRMeA';
-        const apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=date&q=tennis best point&key=${apiKey}`;
+        const apiKey = 'AIzaSyBFeXBEjsEIerJQq0KV16bUeu-ONFVAiB0';
+        const apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=date&q=tennis&key=${apiKey}`;
 
         const response = await fetch(apiUrl);
         if (!response.ok) {
