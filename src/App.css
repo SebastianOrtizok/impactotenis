@@ -184,29 +184,52 @@ a :hover{
     background-color: #2ecc71;
     width: 100%;
 }
+
+
+/* La seccion 2*/
 .principal_section2 {
     background-color: #ffffff;
     width: 100%;
-    height: 800px;
-    overflow: scroll;
+}
 
+.videosYoutube {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo y máximo según tus necesidades */
+    gap: 2rem;
+    justify-content: space-evenly;
+  }
+  
+
+.video{
+    align-self: center;
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px black;
 }
-.principal_section3 {
-    background-color: #f39c12;
-    width: 100%;
-    height: 200px;
+
+.videoTitle{
+    width: 320px;
 }
+.videoDescripcion{
+    width: 300px;
+}
+
+/* Sección 3 */ 
 
 .principal_section3 {
     background-color: var(--color-azul-cielo);
     width: 100%;
-    height: 400px;
 }
-
 
 
 @media (max-width: 768px) {
     .h1.carrouseltext {
         font-size: 3rem;
        }
+       .videosYoutube {
+        grid-template-columns: 1fr;
+        justify-content: center;
+        justify-items: center;
+}
 }
