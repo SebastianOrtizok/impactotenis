@@ -42,6 +42,7 @@ function PintaResultados() {
                   className="card-img-top"
                   alt="Descripción de la imagen"
                   data-id={articulo.id}
+                  style={{ width: '50%', height: '50%' }}
                 />
               </div>
               <div className="card-body">

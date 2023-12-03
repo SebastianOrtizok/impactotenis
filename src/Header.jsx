@@ -63,11 +63,11 @@ export const Header = () => {
 							</ul>
 						</li>
 						<li className="nav-item">
-            <Link to="/juegos">
+            {/* <Link to="/juegos">
 					<li>
 					<i className="fa fa-gamepad"></i> Juegos
 					</li>
-				</Link>
+				</Link> */}
 				</li>
 						<li className="nav-item">
 							<a

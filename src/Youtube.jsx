@@ -6,8 +6,8 @@ const Youtube = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const apiKey = 'AIzaSyBFeXBEjsEIerJQq0KV16bUeu-ONFVAiB0';
-        const apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=date&q=tennis&key=${apiKey}`;
+        const apiKey = 'AIzaSyADvoc7ahZXy8rNU6nk39lGT27nOaaRMeA';
+        const apiUrl = `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&order=date&q=clases%20impactotenis&key=${apiKey}`;
 
         const response = await fetch(apiUrl);
         if (!response.ok) {
@@ -27,9 +27,10 @@ const Youtube = () => {
 
   return (
     <div className='videosYoutube'>
+    <h1 className='h1_section2'>Los mejores videos de Youtube</h1>
       {videos.map((video) => (
-        <div className='videoContenedor' key={video.id.videoId}>
-          {/* <h2 className='videoTitle'>{video.snippet.title}</h2> */}
+        <div className='videoContenedor' key={video.id.videoId || video.id.channelId}>
+          <h2 className='videoTitle'>{video.snippet.title}</h2>
           {/* <p className='video'>{video.snippet.description}</p> */}
           {/* <p>Published At: {video.snippet.publishedAt}</p> */}
           <iframe

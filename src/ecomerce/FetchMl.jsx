@@ -7,7 +7,7 @@ export const FetchMl = () => {
     async function cargarproductos() {
       try {
         const response = await fetch(
-          "https://api.mercadolibre.com/sites/MLA/search?q=ropa-deportiva"
+          "https://api.mercadolibre.com/sites/MLA/search?q=raquetas de tenis"
         );
         const json = await response.json();
         const nuevosArticulos = json.results;
