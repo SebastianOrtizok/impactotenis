@@ -6,9 +6,7 @@ function InfoJugador() {
 
 	useEffect(() => {
 		const fetchData = async () => {
-			const url = `https://tennisprodata1.p.rapidapi.com/players/${encodeURIComponent(
-				player
-			)}`;
+			const url = `https://tennisprodata1.p.rapidapi.com/players/${encodeURIComponent(player)}`;
 			const options = {
 				method: "GET",
 				headers: {

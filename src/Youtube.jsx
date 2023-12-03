@@ -30,7 +30,7 @@ const Youtube = () => {
     <h1 className='h1_section2'>Los mejores videos de Youtube</h1>
       {videos.map((video) => (
         <div className='videoContenedor' key={video.id.videoId || video.id.channelId}>
-          <h2 className='videoTitle'>{video.snippet.title}</h2>
+          {/* <h2 className='videoTitle'>{video.snippet.title}</h2> */}
           {/* <p className='video'>{video.snippet.description}</p> */}
           {/* <p>Published At: {video.snippet.publishedAt}</p> */}
           <iframe
