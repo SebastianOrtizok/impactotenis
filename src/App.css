@@ -192,15 +192,21 @@ a :hover{
 
 /* La seccion 2*/
 .principal_section2 {
-    padding-top: 1rem;
+    display: flex;
+    padding-top: 0.5rem;
     background-color: var(--color-azul-cielo);
     width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
+
 .h1_section2{
+    margin: 0 0 0.5rem 0;
     display: block;
     text-align: center;
-    margin-top: 0.5rem;
+    padding: 0.2rem 0;
     color: var(--color-blanco);
 }
 
@@ -227,6 +233,8 @@ a :hover{
     width: 300px;
 }
 
+
+
 /* Section 3*/
 .principal_section3 {
     padding-top: 1rem ;
@@ -244,12 +252,18 @@ a :hover{
     justify-content: space-evenly;
   }
 
-  /* Sección 4 */ 
+  /* Sección 4 Ecommerce*/ 
 .principal_section4 {
-    background-color: #ffffff;
+    background-color: var(--color-blanco);
     width: 100%;
 }
 
+  /* Sección 5  Juegos */ 
+  .principal_section5 {
+    padding-top: 1rem;
+    background-color: var(--color-azul-cielo);
+    width: 100%;
+}
 
 @media (max-width: 768px) {
     .h1.carrouseltext {

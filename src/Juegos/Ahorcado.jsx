@@ -1,22 +1,15 @@
-import { useState } from 'react';
+import { useState, useEffect  } from 'react';
 import './ahorcado.css'; 
-// import ahorcado0 from "./img/ahorcado0.gif"
-// import ahorcado1 from "./img/ahorcado1.gif"
-// import ahorcado2 from "./img/ahorcado2.gif"
-// import ahorcado3 from "./img/ahorcado3.gif"
-// import ahorcado4 from "./img/ahorcado4.gif"
-// import ahorcado5 from "./img/ahorcado5.gif"
-// import ahorcado6 from "./img/ahorcado6.gif"
 
 let letra = "";
 let palabraescondida = [];
 let caracterespalabraaencontrar = [];
 let letraencontrada = 0;
-let letrasusadasincorrecta = [];
-let letrasusadas=[]
+let letraIncorrecta = "";
+let letrasusadas=""
 let letrausada = false;
 let index = 0;
-let vida = 7;
+let vida = 6;
 let acertadas = [];
 var palabraaencontrar = "";
 let palabraAleatoria = [
@@ -47,41 +40,70 @@ for (let i = 0; i < palabraaencontrar.length; i++) {
 
 const Ahorcado = () => {
   const [mensajes, setMensaje] = useState("0")
-  const [mensajeLetraUsada, setLetrasUsadas] = useState([])
-  const [mensaje2, setMensaje2] = useState("mensaje2")
+  const [mensajeLetraUsada, setLetrasUsadas] = useState()
+  const [mensajeLetraErrada, setLetraErrada] = useState([])
+  const [mensaje2, setMensaje2] = useState("")
+  const [mostrarBotonReload, setMostrarBotonReload] = useState(false);
+  const [teclado, setTeclado] = useState(true)
+  const [MensajePrincipal, setMensajePrincipal] = useState()
 
 
-  if (palabraaencontrar.length != letraencontrada) {
     //Si da igual entonces la palabra ya se encontró
     let letraok = false;
     const printLetter = (letter) => {
      for (let i = 0; i < palabraaencontrar.length; i++) {
-        if (letra == caracterespalabraaencontrar[i] && letrausada !== true) {
-          setLetrasUsadas(...letra)
+        if (letter == caracterespalabraaencontrar[i] && letrausada !== true) {
           letraencontrada = letraencontrada + 1;
           palabraescondida[i] = palabraescondida[i].replace(
-            " - ", letra 
+            " - ", letter 
           );
-          acertadas[i] = letra;
+          acertadas[i] = letter;
           setMensaje( acertadas.join(""))
-          setMensaje2 ( "Bien ahí Roger, encontraste la letra " +  letra )
+          setMensaje2 ( "Bien ahí Roger, encontraste la letra " +  letter )
+          letraok=true
+          letrasusadas=letrasusadas + letter 
+          setLetrasUsadas(letrasusadas) 
+        } 
+          letrasusadas=letrasusadas + letter
           }
-          console.log("la letra que ingresaste es..." + letra)
+          if (letraok!=true  && letrausada == false) {
+            setMensaje2 ( "Mala una, esa letra no existe " +  letter )
+            vida=vida-1
+            letraIncorrecta=letraIncorrecta + letter
+            index=index+1
+            console.log(letraIncorrecta)
+            setLetrasUsadas(letraIncorrecta)
+            setLetraErrada(letraIncorrecta)
+          }
           
-     
-            console.log(`Letra clickeada: ${letter}`);
-            letra=letter
-          }
+          
+
+          if (vida === 0 || letraencontrada === palabraaencontrar.length) {
+            setTeclado(false);
+            setMostrarBotonReload(true);
+      
+            if (letraencontrada === palabraaencontrar.length) {
+              setMensajePrincipal(`Felicitaciones, adivinaste la palabra escondida ${palabraaencontrar}!!!`);
+              console.log("Ganaste")
+            } else {
+              setMensaje2(`Perdiste no te quedan mas vidas, la palabra a encontrar era ${palabraaencontrar}`);
+            }
+          } 
+          
         } 
 
+          
+        
+        
   return (
     <>
-{/* <div className="contenedor">
+<div className="contenedor">
         <header>
-          <h1>Ahorcado de tenis</h1>
+          <h3 className='titulo_ahorcado'>Ahorcado</h3>
           <div className="informacion">
             <div className="infoimage">
-              <img id="image" src={ahorcado0} alt="Imagen de información" />
+            <img id="image" src={`/src/Juegos/img/ahorcado${vida}.gif`} alt="Imagen de información" />
+
             </div>
             <div className="info1">
               <p className="muestrainfo" id="parrafos"></p>
@@ -98,22 +120,29 @@ const Ahorcado = () => {
               <p id="letraserradas">
                 Erradas
                 <br />
-                0
+                {mensajeLetraErrada}
               </p>
             </div>
           </div>
         </header>
+        
 
 <div> <p className='escondida'>La palabra tiene {palabraaencontrar.length} letras</p> 
 
  </div> 
-<div className='escondida'>{palabraescondida.join("")}
 
+<div className='escondida'>{palabraescondida.join("")}
 </div>
+<p>Aca la palabra a encontrar</p>
+  <h1>{MensajePrincipal}</h1>
+{mostrarBotonReload && (
+<button type="text" onClick={() => window.location.reload()}>
+            Volver a Jugar 
+          </button>
+)}
 
         <p id="info">{mensaje2}</p>
-        <a id="muestrapalabra">Aca la palabra a encontrar</a>
-
+        {teclado && (       
         <div className="keyboard" id="keyboard">
           <div className="fila1">
             <button className="key" id="q" onClick={() => printLetter('q')}>
@@ -202,22 +231,16 @@ const Ahorcado = () => {
             <button className="key" id="m" onClick={() => printLetter('m')}>
              M
             </button>
-           
           </div>
+
         </div>
+            )}
       </div>
 
-      <div id="muestraresultado">
-        <p id="ganaste"></p>
-        <p id="perdiste"></p>
-        <button type="text" id="reload" onClick={() => window.location.reload()}>
-          Volver a Jugar
-        </button>
-      </div> */}
     </>
   );
 }
-}  
+ 
 
 export default Ahorcado
 

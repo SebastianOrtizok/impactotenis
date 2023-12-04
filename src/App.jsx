@@ -3,7 +3,9 @@ import './App.css'
 import { Header } from "./Header";
 import { Principal } from './Principal'
 import { EcommerceIndex } from './ecomerce/EcommerceIndex'
-// import Ahorcado from "./Juegos/ahorcado";
+import Ahorcado from "./Juegos/Ahorcado";
+import Youtube from "./Youtube";
+
 
 
 
@@ -17,7 +19,8 @@ function App() {
 				<Routes>
 					<Route path="/" element={<Principal />} />
 					<Route path="/ecommerce" element={<EcommerceIndex />} />
-					{/* <Route path="/juegos" element={<Ahorcado/>} /> */}
+					<Route path="/juegos" element={<Ahorcado/>} />
+					<Route path="/youtube" element={<Youtube/>} />
 					{/* <Route path="/categoria" element={<Categoria />} />
 					<Route path="/Catalog" element={<Catalog />} />
 					<Route path="/buscar" element={<BuscarProductos />} />

@@ -26,11 +26,11 @@ export const Header = () => {
 						className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll"
 						style={{ "--bs-scroll-height": "100px" }}
 					>
-						<li className="nav-item">
-							<a className="nav-link" href="#">
-								Cursos
-							</a>
-						</li>
+            <Link to="/youtube">
+					<li>
+					<i className="fa fa-gamepad"></i> Videos
+					</li>
+				</Link>
 						<li className="nav-item dropdown">
 							<a
 								className="nav-link dropdown-toggle"
@@ -63,12 +63,12 @@ export const Header = () => {
 							</ul>
 						</li>
 						<li className="nav-item">
-            {/* <Link to="/juegos">
-					<li>
-					<i className="fa fa-gamepad"></i> Juegos
-					</li>
-				</Link> */}
-				</li>
+							<Link to="/juegos">
+								<li>
+									<i className="fa fa-gamepad"></i> Juegos
+								</li>
+							</Link>
+						</li>
 						<li className="nav-item">
 							<a
 								className="nav-icon position-relative text-decoration-none"
