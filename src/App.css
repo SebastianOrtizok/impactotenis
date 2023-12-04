@@ -210,6 +210,21 @@ a :hover{
     color: var(--color-blanco);
 }
 
+.videoContenedor{
+    display: grid;
+        margin: 0.5rem;
+        display: grid;
+        grid-template-rows: auto;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-content: space-evenly;
+        gap: 5px;
+}
+
+iframe{
+    border-radius: 10px;
+    box-shadow: 1px 1px 7px rgb(99, 99, 99)
+}
+
 .videosYoutube {
     padding: 1rem;
     display: grid;

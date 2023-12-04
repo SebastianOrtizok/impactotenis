@@ -28,10 +28,12 @@ const Youtube = () => {
   return (
     <div className='videosYoutube'>
     <h1 className='h1_section2'>Los mejores videos de Youtube</h1>
+
+    
       {videos.map((video) => (
         <div className='videoContenedor' key={video.id.videoId || video.id.channelId}>
-          {/* <h2 className='videoTitle'>{video.snippet.title}</h2> */}
-          {/* <p className='video'>{video.snippet.description}</p> */}
+        <div>
+          <h2 className='videoTitle'>{video.snippet.title}</h2>
           {/* <p>Published At: {video.snippet.publishedAt}</p> */}
           <iframe
             className="video"
@@ -39,9 +41,10 @@ const Youtube = () => {
             height="100%"
             src={`https://www.youtube.com/embed/${video.id.videoId}`}
             title={video.snippet.title}
-            frameBorder="0"
             allowFullScreen
           ></iframe>
+          </div>
+          <p className='video'>{video.snippet.description}</p>
         </div>
       ))}
     </div>

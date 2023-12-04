@@ -1,5 +1,6 @@
 import { useState, useEffect  } from 'react';
 import './ahorcado.css'; 
+import './img/ahorcado7.gif'
 
 let letra = "";
 let palabraescondida = [];
@@ -9,7 +10,7 @@ let letraIncorrecta = "";
 let letrasusadas=""
 let letrausada = false;
 let index = 0;
-let vida = 6;
+let vida = 7;
 let acertadas = [];
 var palabraaencontrar = "";
 let palabraAleatoria = [

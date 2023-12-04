@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import InfoJugador from "./InfoJugador";
 
 const RannkingATP = () => {
 	const url = "https://ultimate-tennis1.p.rapidapi.com/live_leaderboard/50";
@@ -11,6 +12,7 @@ const RannkingATP = () => {
 		},
 	};
 	const [data, setData] = useState([]);
+    const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
 	useEffect(() => {
 		const obtenerDatos = async () => {
@@ -29,39 +31,35 @@ const RannkingATP = () => {
 		// Nota: Si utilizas dependencias en useEffect, agrégales a este arreglo para evitar problemas de rendimiento o comportamiento inesperado.
 	}, []);
 
+    const handlePlayerClick = (playerId) => {
+        setSelectedPlayerId(playerId);
+        console.log(selectedPlayerId)
+      };
+
 	return (
-		<div className="section_3">
-			<table className="table table-striped table-hover">
-				<thead>
-					<th>Ranking</th>
-					<th>Nombre</th>
-					<th>Puntos</th>
-					<th>Edad</th>
-				</thead>
-				<tbody>
-                {data.map((ranking, index) => (
-						<>
-							<div key={index} />
-							<tr>
-								<td>
-                                {ranking.Rank}
-                                </td>
-                                <td>
-                                {ranking.Name}
-                                </td>
-                                <td>
-                                {ranking.Points}
-                                </td>
-                                <td>
-                                {ranking.Age}
-                                </td>
-                                
-							</tr>
-						</>
-					))}
-				</tbody>
-			</table>
-		</div>
+        <div className="section_3">
+        <table className="table table-striped table-hover">
+          <thead>
+            <th>Ranking</th>
+            <th>Nombre</th>
+            <th>Puntos</th>
+            <th>Edad</th>
+          </thead>
+          <tbody>
+            {data.map((ranking, index) => (
+              <tr key={index} onClick={() => handlePlayerClick(ranking.id)} style={{ cursor: "pointer" }}>
+                <td>{ranking.Rank}</td>
+                <td>{ranking.Name}</td>
+                <td>{ranking.Points}</td>
+                <td>{ranking.Age}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        {selectedPlayerId && (
+          <InfoJugador playerId={selectedPlayerId} onClose={() => setSelectedPlayerId(null)} />
+        )}
+      </div>
 	);
 };
 

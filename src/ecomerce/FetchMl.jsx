@@ -13,7 +13,7 @@ export const FetchMl = () => {
         const nuevosArticulos = json.results;
 
         // Actualiza el estado local con los nuevos artículos
-        setArticulos(nuevosArticulos.slice(0, 10));
+        setArticulos(nuevosArticulos.slice(0, 5));
       } catch (error) {
         console.error("Error al cargar los datos:", error);
       }
