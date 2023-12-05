@@ -41,6 +41,11 @@
   }
 */
 
+.my-atropos {
+    width: 320px;
+    height: 160px;
+  }
+
 body{
     background-color:#F8F9FA;
 }
