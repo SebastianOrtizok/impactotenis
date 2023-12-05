@@ -244,12 +244,17 @@ iframe{
   }
   
 
-.video{
+.video_description{
     align-self: center;
-    width: 320px;
+    width: 90%;
+    padding: 0.5rem;
     border-radius: 10px;
     box-shadow: 1px 1px 7px black;
 }
+
+.video{
+    width: auto;
+  }
 
 .videoTitle{
     width: 320px;

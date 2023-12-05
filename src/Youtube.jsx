@@ -45,7 +45,7 @@ const Youtube = () => {
             allowFullScreen
           ></iframe>
           </div>
-          <p className='video'>{video.snippet.description}</p>
+          <p className='video_description'>{video.snippet.description}</p>
         </div>
       ))}
     </div>

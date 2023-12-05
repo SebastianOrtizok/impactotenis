@@ -9,7 +9,7 @@ export const Principal = function () {
 			<section>
 
 				<div className="principal_section1">
-					{/* <Carrousel /> */}
+					<Carrousel />
 				</div>
 
 			</section>
@@ -58,13 +58,13 @@ export const Principal = function () {
 				<div className="principal_section3">
 					<h1 className="h1_section2">Informacion actualizada</h1>
 					<div className="container py-1">
-						{/* <RannkingATP /> */}
+						<RannkingATP />
 					</div>
 				</div>
 			</section>
 			<section>
 				<div className="principal_section4">
-					{/* <EcommerceIndex /> */}
+					<EcommerceIndex />
 				</div>
 			</section>
 			<section>
