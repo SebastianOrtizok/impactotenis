@@ -26,6 +26,7 @@ const Youtube = () => {
   }, []); // Este efecto se ejecutará solo una vez al montar el componente
 
   return (
+    <div className="principal_section2">
     <div className='videosYoutube'>
     <h1 className='h1_section2'>Los mejores videos de Youtube</h1>
 
@@ -47,6 +48,7 @@ const Youtube = () => {
           <p className='video'>{video.snippet.description}</p>
         </div>
       ))}
+    </div>
     </div>
   );
 };
