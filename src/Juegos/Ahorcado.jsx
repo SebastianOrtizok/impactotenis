@@ -98,7 +98,7 @@ const Ahorcado = () => {
         
   return (
     <>
-<div className="contenedor">
+<div className="contenedor principal_section5">
         <header>
           <h3 className='titulo_ahorcado'>Ahorcado</h3>
           <div className="informacion">
