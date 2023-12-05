@@ -194,19 +194,17 @@ a :hover{
 .principal_section2 {
     display: flex;
     background-color: var(--color-azul-cielo);
-    width: 100%;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-
-    margin: 20px;
     padding: 20px;
-    border-radius: 10px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
 
 }
 
-
+.h1_principal_section2{
+    background-color: var(--color-azul-cielo);
+}
 .h1_section2{
     margin: 0 0 0.5rem 0;
     display: block;
@@ -216,9 +214,7 @@ a :hover{
 }
 
 .videoContenedor{
-    display: grid;
         margin: 0.5rem;
-        display: grid;
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-evenly;
@@ -226,8 +222,9 @@ a :hover{
 }
 
 iframe{
-    width: 100%;
+    width: auto;
     height: auto;
+    margin: 1rem;
     border-radius: 10px;
     box-shadow: 1px 1px 7px rgb(99, 99, 99)
 }
@@ -260,8 +257,19 @@ iframe{
 /* Section 3*/
 .principal_section3 {
     padding-top: 1rem ;
-    background-color: yellowgreen;
+    background-color: var(--color-verde-tenis) ;
     width: 100%;
+}
+.tabla_jugador{
+    width: 60%;
+    background-color: var(--color-verde-tenis) ;
+    box-shadow: 1px 1px 7px rgb(99, 99, 99);
+    border-radius: 10x;
+}
+
+.info_jugador_btn{
+    align-items: center;
+    width: 50%;
 }
 
 
@@ -269,10 +277,12 @@ iframe{
 .infoJugador_section3 {
     padding: 1rem;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo y máximo según tus necesidades */
     gap: 2rem;
-    justify-content: space-evenly;
-  }
+    justify-content: center;
+    grid-template-rows: auto minmax(600px, auto);
+    justify-items: center;
+}
+
 
   /* Sección 4 Ecommerce*/ 
 .principal_section4 {

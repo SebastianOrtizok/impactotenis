@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-// ... (importaciones)
 
 const InfoJugador = ({ playerId, onClose }) => {
   const [infoJugador, setInfoJugador] = useState(null);
@@ -32,79 +31,66 @@ const InfoJugador = ({ playerId, onClose }) => {
   }, [playerId]);
 
   return (
+    <>
     <div className="infoJugador_section3">
       {isLoading && <p>Cargando...</p>}
       {!isLoading && infoJugador && (
         <>
-          <div className="d-flex">
-              <h1>{infoJugador[0].Name}</h1>
-              <table className="table table-borderless table-transparent">
+        <h1>{infoJugador[0].Name}</h1>
+              <table className="tabla_jugador">
             <tbody>
               <tr>
-              <td className="font-weight-bold">Age:</td>
-                <td>{infoJugador[0].Age}</td>
+              <td className="font-weight-bold">Age:{infoJugador[0].Age}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">F.Nacimiento:</td>
-                <td>{infoJugador[0].Birthday}</td>
+              <td className="font-weight-bold">F.Nacimiento:{infoJugador[0].Birthday}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Lugar de nacimiento:</td>
-                <td>{infoJugador[0].Birthplace}</td>
+              <td className="font-weight-bold">Nacido en:{infoJugador[0].Birthplace}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Entrenador:</td>
-                <td>{infoJugador[0].Coach}</td>
+              <td className="font-weight-bold">Entrenador:{infoJugador[0].Coach}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Dinero ganado 2023:</td>
-                <td>{infoJugador[0]["Prize money 2023"]}</td>
+              <td className="font-weight-bold">Dinero ganado 2023:{infoJugador[0]["Prize money 2023"]}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Dinero acumulado:</td>
-                <td>{infoJugador[0]["Prize money Career"]}</td>
+              <td className="font-weight-bold">Dinero acumulado:{infoJugador[0]["Prize money Career"]}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Ranking:</td>
-                <td>{infoJugador[0].Rank}</td>
+              <td className="font-weight-bold">Ranking:{infoJugador[0].Rank}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Títulos:</td>
-                <td>{infoJugador[0]["Titles Career"]}</td>
+              <td className="font-weight-bold">Títulos:{infoJugador[0]["Titles Career"]}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Profesional desde:</td>
-                <td>{infoJugador[0]["Year Turned Pro"]}</td>
+              <td className="font-weight-bold">Profesional desde:{infoJugador[0]["Year Turned Pro"]}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Instagram:</td>
-                <td>{infoJugador[0].instagram}</td>
+              <td className="font-weight-bold">{infoJugador[0].instagram}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Twitter:</td>
-                <td>{infoJugador[0].twitter}</td>
+              <td className="font-weight-bold">{infoJugador[0].twitter}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Peso:</td>
-                <td>{infoJugador[0].weight}</td>
+              <td className="font-weight-bold">Peso:{infoJugador[0].weight}</td>
               </tr>
               <tr>
-              <td className="font-weight-bold">Altura:</td>
-                <td>{infoJugador[0].height}</td>
+              <td className="font-weight-bold">Altura:{infoJugador[0].height}</td>
               </tr>
             </tbody>
           </table>
-              <button onClick={onClose}>Cerrar</button>
               <div className="ml-3">
               <div>
               <img src={infoJugador[0].Image} alt="Jugador" />
             </div>
-            </div>
           </div>
         </>
       )}
+              <button className="info_jugador_btn" onClick={onClose}>Cerrar</button>
       {console.log(infoJugador)}
     </div>
+    </>
   );
 };
 
