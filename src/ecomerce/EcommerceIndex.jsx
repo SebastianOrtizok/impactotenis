@@ -10,7 +10,7 @@ export const EcommerceIndex = function (){
     <div className="container py-1">
         <div className="row text-center py-1">
             <div className="col-lg-6 m-auto">
-                <h1 className="h1">¡Estos son los productos destacados del mes!</h1>
+                <h1 className="h1_ecommerce">¡Estos son los productos destacados del mes!</h1>
                 <p>
                     Presentamos nuestros productos destacados, este producto ha sido seleccionado cuidadosamente para brindarte la mejor experiencia.
                 </p>

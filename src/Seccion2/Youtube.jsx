@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import "./style_section2.css"
 
 const Youtube = () => {
   const [videos, setVideos] = useState([]);

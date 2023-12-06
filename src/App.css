@@ -50,6 +50,32 @@ body{
     background-color:#F8F9FA;
 }
 
+h1{
+    /* background-color: var(--color-azul-cielo); */
+    margin:0 0 0 0;
+    padding-top: 10px;
+    text-align: center;
+    color: var(--color-blanco);
+    font-size: 3rem;
+    text-shadow: #000000 1px 0 10px;
+
+}
+
+h2{
+    margin:30px 0 0 0;
+    padding: 10px 0 5px 0;
+    text-align: center;
+    color: var(--color-negro);
+    font-size: 30px;
+    text-shadow: #545454 1px 0 3px;
+}
+
+* {
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+  }
+
 /* Nav Bar*/
 .container-fluid {
     position: fixed;
@@ -114,6 +140,12 @@ a :hover{
     color:white
 }
 
+p{
+    font-size: 20px;
+    color: var(--color-negro);
+    padding: 0.5rem;
+}
+
 /* Carrousel*/
 .carousel{
     margin-top: 20px;
@@ -141,52 +173,6 @@ a :hover{
     display: none;
 }
 
-/* e Commerce*/
-.ecommerce .card{
-    box-shadow: 1px 1px 7px rgb(148, 148, 148);
-}
-
-.ecommerce img{
-    border-radius: 10px;
-    max-height: 300px;
-    padding:2px 2px 2px 2px;
-}
-
-.card-img-top:hover{
-    transition: 1s;
-    filter: brightness(110%);
-    transform: scale(1.5);
-    z-index: 0;
-}
-
-
-
-.contenedorImage{
-    overflow: hidden;
-    z-index: 0;
-}
-
-
-/* Popup Ecomerce*/
-.popup-container {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
-    z-index: 1000;
-    border: 1px solid #ccc;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .popup-content {
-    max-width: 100%; 
-    margin: auto;
-  }
-  
-
-
 /* Componente pricipal*/ 
 
 .principal_section1 {
@@ -207,42 +193,16 @@ a :hover{
 
 }
 
-.h1_principal_section2{
-    background-color: var(--color-azul-cielo);
-}
-.h1_section2{
-    margin: 0 0 0.5rem 0;
-    display: block;
-    text-align: center;
-    padding: 0.2rem 0;
-    color: var(--color-blanco);
-}
 
-.videoContenedor{
+
+/* .videoContenedor{
         margin: 0.5rem;
         grid-template-rows: auto;
         grid-template-columns: 1fr 1fr 1fr;
         justify-content: space-evenly;
         gap: 5px;
-}
+} */
 
-iframe{
-    width: auto;
-    height: auto;
-    margin: 1rem;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px rgb(99, 99, 99)
-}
-
-.videosYoutube {
-    margin: 10px 0 0 0;
-    padding: 1rem;
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Ajusta el ancho mínimo y máximo según tus necesidades */
-    gap: 2rem;
-    justify-content: space-evenly;
-  }
-  
 
 .video_description{
     align-self: center;
@@ -252,46 +212,12 @@ iframe{
     box-shadow: 1px 1px 7px black;
 }
 
-.video{
-    width: auto;
-  }
 
 .videoTitle{
     width: 320px;
 }
 .videoDescripcion{
     width: 300px;
-}
-
-
-
-/* Section 3*/
-.principal_section3 {
-    padding-top: 1rem ;
-    background-color: var(--color-verde-tenis) ;
-    width: 100%;
-}
-.tabla_jugador{
-    width: 60%;
-    background-color: var(--color-verde-tenis) ;
-    box-shadow: 1px 1px 7px rgb(99, 99, 99);
-    border-radius: 10x;
-}
-
-.info_jugador_btn{
-    align-items: center;
-    width: 50%;
-}
-
-
-
-.infoJugador_section3 {
-    padding: 1rem;
-    display: grid;
-    gap: 2rem;
-    justify-content: center;
-    grid-template-rows: auto minmax(600px, auto);
-    justify-items: center;
 }
 
 
@@ -318,3 +244,22 @@ iframe{
         justify-items: center;
 }
 }
+
+/* Estilo base para el contenedor del video */
+iframe {
+    position: relative;
+    width: 99%;
+    height: auto;
+    margin: 1rem;
+    border-radius: 20px;
+    box-shadow: 10px 10px 10px rgb(78, 78, 78)
+  }
+
+  .video_contenedor{
+padding: 0.1rem;
+margin: 1rem;
+border: 1px ;
+border-radius: 20px;
+
+  }
+  

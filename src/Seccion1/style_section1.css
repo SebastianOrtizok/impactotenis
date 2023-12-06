@@ -1,0 +1,35 @@
+.section1_background {
+    display: flex;
+    background: linear-gradient(rgba(46, 204, 112, 0.1), rgba(46, 204, 112, 1)),
+      url(./imgbackground.jpg) no-repeat center center;
+    background-size: cover;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 700px;
+    animation: scrollBackground 10s infinite linear;
+  }
+  
+  @keyframes scrollBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 100%;
+    }
+  }
+
+  .h1_section1{
+    font-size: 7rem;
+  }
+
+
+  @media (max-width: 768px) {
+    .h1_section1 {
+        font-size: 3rem;
+       }
+       .section1_background {
+height: 400px;
+}
+}
+

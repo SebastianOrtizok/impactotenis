@@ -1,9 +1,11 @@
 import foto5 from '/src/Carrousel/foto5.jpg';
 import foto6 from '/src/Carrousel/foto6.jpg';
 import foto7 from '/src/Carrousel/foto7.jpg';
+import "./style_section1.css"
 
 export const Carrousel = () => {
     return (
+        <body className='section1_background '>
 <div id="template-mo-zay-hero-carousel" className="carousel slide" data-bs-ride="carousel" data-bs-interval="7000">
     <ol className="carousel-indicators">
         <li data-bs-target="#template-mo-zay-hero-carousel" data-bs-slide-to="0" className="active"></li>
@@ -65,6 +67,7 @@ export const Carrousel = () => {
         <i className="fas fa-chevron-right"></i>
     </a>
 </div>
+</body>
     )
 }
 

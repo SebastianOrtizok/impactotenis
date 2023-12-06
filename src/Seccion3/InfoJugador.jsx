@@ -1,3 +1,4 @@
+import "./style_section3.css"
 import { useEffect, useState } from "react";
 
 const InfoJugador = ({ playerId, onClose }) => {
@@ -10,7 +11,7 @@ const InfoJugador = ({ playerId, onClose }) => {
       const options = {
         method: "GET",
         headers: {
-          "X-RapidAPI-Key": "9457443555msh10aa92ecf1a0a69p1b90e6jsnff11b312d0b4",
+          "X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
           "X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
         },
       };

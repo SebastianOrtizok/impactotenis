@@ -1,0 +1,148 @@
+:root {
+    /* Colores principales */
+    --color-verde-tenis: #2ecc71; /* Fondo de secciones, botones destacados, etc. */
+    --color-blanco: #ffffff; /* Fondos principales, texto destacado */
+    --color-gris-claro: #ecf0f1; /* Fondos secundarios, separadores */
+  
+    /* Colores de acento */
+    --color-azul-cielo: #3498db; /* Detalles y acentos */
+    --color-naranja: #f39c12; /* Destacados y elementos de llamada a la acción */
+  
+    /* Color de texto */
+    --color-negro: #2c3e50; /* Texto principal */
+  
+    /* Fuentes y otros estilos de texto */
+    --fuente-principal: 'Arial', sans-serif; /* Puedes cambiar esto según tus preferencias de fuente */
+    --tamanio-texto: 16px; /* Tamaño base del texto */
+  
+    /* Otros estilos */
+    --radio-bordes: 8px; /* Radio de los bordes redondeados, ajusta según sea necesario */
+  }
+
+/* Section 3*/
+.principal_section3 {
+    padding-top: 1rem ;
+    background-color: var(--color-verde-tenis) ;
+    width: 100%;
+}
+
+.tabla_jugador{
+    width: 60%;
+    background-color: var(--color-verde-tenis) ;
+    box-shadow: 1px 1px 7px rgb(99, 99, 99);
+    border-radius: 10x;
+}
+
+.info_jugador_btn{
+    align-items: center;
+    width: 50%;
+}
+
+
+.infoJugador_section3 {
+    padding: 1rem;
+    display: grid;
+    gap: 2rem;
+    justify-content: center;
+    grid-template-rows: auto minmax(600px, auto);
+    justify-items: center;
+}
+
+ul{
+    list-style: none;
+}
+
+.secion3{
+    margin-top: 20px;
+}
+
+.section3_background {
+    display: flex;
+    background-color: var(--color-verde-tenis);
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    animation: scrollBackground 20s infinite linear;
+  }
+  
+#jugadores{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+#torneos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.container_torneos_section3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+
+.img_section3{
+    align-items: center;
+    width: 20%;
+}
+
+  .ranking {
+    text-align: center;
+    background-color: var(--color-verde-tenis);
+    transform: translateY(-100%);
+    animation: fadeInTitle 1s forwards;
+  }
+
+  .img_section3{
+    box-shadow: 1px 1px 5px black;
+    border-radius: 10px;
+  }
+
+  .p_section3{
+    display: inline;
+    text-align: center;
+font-size: 20px;
+  }
+.card{
+box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.56);
+}
+
+.card-body_section3{
+    background-color: var(--color-verde-tenis);
+  }
+
+
+  
+  @keyframes fadeInTitle {
+    0% {
+      opacity: 0;
+      transform: translateY(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0%);
+    }
+  }
+
+  .h2_section3{
+    color: var(--color-blanco);
+  }
+
+  .section3{
+    align-items: center;
+
+  }
+  .ul_section3{
+    color: var(--color-blanco);
+  }
+
+  @media (max-width: 768px) {
+    .img_section3{
+        width: 20%;
+    }
+}

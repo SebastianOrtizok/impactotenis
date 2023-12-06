@@ -135,7 +135,7 @@ const Ahorcado = () => {
 <div className='escondida'>{palabraescondida.join("")}
 </div>
 <p>Aca la palabra a encontrar</p>
-  <h1>{MensajePrincipal}</h1>
+  <h1 className=' h1_ahorcado '>{MensajePrincipal}</h1>
 {mostrarBotonReload && (
 <button type="text" onClick={() => window.location.reload()}>
             Volver a Jugar 

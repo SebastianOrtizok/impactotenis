@@ -63,6 +63,11 @@ export const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
+              <Link to="/estadisticas" className="nav-link">
+                <i className="fa fa-gamepad"></i>Estadisticas
+              </Link>
+            </li>
+            <li className="nav-item">
               <a
                 className="nav-icon position-relative text-decoration-none"
                 href="micarrito.html"
