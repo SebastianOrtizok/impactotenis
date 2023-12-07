@@ -23,7 +23,7 @@ export const Header = () => {
           <ul className="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll">
             <li className="nav-item">
               <Link to="/youtube" className="nav-link">
-                <i className="fa fa-gamepad"></i> Videos
+              <i className="fa-brands fa-youtube"></i> Videos
               </Link>
             </li>
             <li className="nav-item dropdown">
@@ -34,7 +34,7 @@ export const Header = () => {
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Tienda
+              <i className="fa-solid fa-cart-shopping"></i> Tienda
               </a>
               <ul className="dropdown-menu">
                 <li>
@@ -43,9 +43,9 @@ export const Header = () => {
                   </a>
                 </li>
                 <li>
-                  <a className="dropdown-item" href="#">
-                    Accesorios
-                  </a>
+                <Link to="/ecommerce" className="nav-link">
+                <i className="fa-solid fa-baseball"></i> Accesorios
+              </Link>
                 </li>
                 <li>
                   <hr className="dropdown-divider" />
@@ -64,10 +64,12 @@ export const Header = () => {
             </li>
             <li className="nav-item">
               <Link to="/estadisticas" className="nav-link">
-                <i className="fa fa-gamepad"></i>Estadisticas
+              <i className="fa-solid fa-chart-line"></i> Estadisticas
               </Link>
             </li>
-            <li className="nav-item">
+           
+          </ul>
+
               <a
                 className="nav-icon position-relative text-decoration-none"
                 href="micarrito.html"
@@ -77,8 +79,7 @@ export const Header = () => {
                   0
                 </span>
               </a>
-            </li>
-          </ul>
+
 
           <form className="d-flex" role="search">
             <input

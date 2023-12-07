@@ -22,8 +22,8 @@ function App() {
 					<Route path="/ecommerce" element={<EcommerceIndex />} />
 					<Route path="/juegos" element={<Ahorcado/>} />
 					<Route path="/estadisticas" element={<Seccion3/>} />
-					{/* <Route path="/youtube" element={<Youtube/>} />
-					<Route path="/Catalog" element={<Catalog />} />
+					<Route path="/youtube" element={<Youtube/>} /> 
+					{/* <Route path="/Catalog" element={<Catalog />} />
 					<Route path="/buscar" element={<BuscarProductos />} />
 					<Route path="/acces" element={<ObtenerAccesToken />} />
 					<Route path="*" element={<NotFound />} />

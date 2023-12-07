@@ -57,7 +57,7 @@ h1{
     text-align: center;
     color: var(--color-blanco);
     font-size: 3rem;
-    text-shadow: #000000 1px 0 10px;
+    text-shadow: #000000 1px 0 7px;
 
 }
 
@@ -76,6 +76,12 @@ h2{
     padding: 0;
   }
 
+.h1_ecommerce{
+    margin-top: 20px;
+    box-shadow: none;
+}
+
+
 /* Nav Bar*/
 .container-fluid {
     position: fixed;
@@ -86,12 +92,27 @@ h2{
     z-index: 3;
 }
 
-a {
+.navbar-brand {
     color: #ffffff;
     text-decoration: none;
 }
 
-a :hover{
+.nav-link{
+    color: var(--color-gris-claro);
+}
+
+.nav-link:hover{
+    color: var(--color-blanco);
+}
+
+.navbar-toggler{
+    color: #ffffff;
+    border: 0.1rem solid white;
+}
+
+
+
+a:hover{
     color: var(--color-azul-cielo);
 }
 
@@ -181,46 +202,6 @@ p{
 }
 
 
-/* La seccion 2*/
-.principal_section2 {
-    display: flex;
-    background-color: var(--color-azul-cielo);
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-
-}
-
-
-
-/* .videoContenedor{
-        margin: 0.5rem;
-        grid-template-rows: auto;
-        grid-template-columns: 1fr 1fr 1fr;
-        justify-content: space-evenly;
-        gap: 5px;
-} */
-
-
-.video_description{
-    align-self: center;
-    width: 90%;
-    padding: 0.5rem;
-    border-radius: 10px;
-    box-shadow: 1px 1px 7px black;
-}
-
-
-.videoTitle{
-    width: 320px;
-}
-.videoDescripcion{
-    width: 300px;
-}
-
-
   /* Sección 4 Ecommerce*/ 
 .principal_section4 {
     background-color: var(--color-blanco);
@@ -250,7 +231,7 @@ iframe {
     position: relative;
     width: 99%;
     height: auto;
-    margin: 1rem;
+    margin: 1rem 0;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgb(78, 78, 78)
   }

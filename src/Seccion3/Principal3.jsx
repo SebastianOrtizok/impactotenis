@@ -29,7 +29,7 @@ export const Principal3 = () => {
   <h2 className="h2_section3">Torneos Recientes</h2>
   <p className="p_section3">Resumen de todos los torneos:</p>
   <div className='container_torneos_section3'>
-    <div className="card mx-2 mb-2" style={{ width: '18rem' }}>
+    <div className="card mx-2 mb-2" style={{ width: '16rem' }}>
       <img src={rolandGarros} className="card-img-top" alt="Roland Garros" />
       <div className="card-body card-body_section3">
         <h5 className="card-title">Roland Garros</h5>
@@ -43,7 +43,7 @@ export const Principal3 = () => {
       </div>
     </div>
 
-    <div className="card mx-2 mb-2" style={{ width: '18rem' }}>
+    <div className="card mx-2 mb-2" style={{ width: '16rem' }}>
       <img src={australia} className="card-img-top" alt="Abierto de Australia" />
       <div className="card-body card-body_section3">
         <h5 className="card-title">Abierto de Australia</h5>
@@ -56,7 +56,7 @@ export const Principal3 = () => {
       </div>
     </div>
 
-    <div className="card mx-2 mb-2" style={{ width: '18rem' }}>
+    <div className="card mx-2 mb-2" style={{ width: '16rem' }}>
       <img src={wimbledon} className="card-img-top" alt="Wimbledon" />
       <div className="card-body card-body_section3">
         <h5 className="card-title">Wimbledon</h5>
@@ -69,7 +69,7 @@ export const Principal3 = () => {
       </div>
     </div>
 
-    <div className="card mx-2 mb-2" style={{ width: '18rem' }}>
+    <div className="card mx-2 mb-2" style={{ width: '16rem' }}>
       <img src={usOpen} className="card-img-top" alt="US Open" />
       <div className="card-body card-body_section3">
         <h5 className="card-title">US Open</h5>
@@ -89,7 +89,7 @@ export const Principal3 = () => {
       <Atropos  
 			activeOffset={10}
         shadowScale={20}>
-        <h2 className="h2_section3">Jugadore destacado</h2>
+        <h2 className="h2_section3">Jugador destacado</h2>
         <img className="img_jugadorDestacado_section3" data-atropos-offset="3" src={djokovic} alt="Imagen de Novak Djokovic" />
         </Atropos>
       </section>
