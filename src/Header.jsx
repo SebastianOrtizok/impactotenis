@@ -62,12 +62,52 @@ export const Header = () => {
                 <i className="fa fa-gamepad"></i> Juegos
               </Link>
             </li>
-            <li className="nav-item">
-              <Link to="/estadisticas" className="nav-link">
-              <i className="fa-solid fa-chart-line"></i> Estadisticas
+           
+
+
+
+
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+              <i className="fa-solid fa-cart-shopping"></i> Estadisticas
+              </a>
+              <ul className="dropdown-menu">
+              <li className="nav-item">
+              <Link to="/ranking" className="nav-link">
+              <i className="fa-solid fa-chart-line"></i> Ranking
               </Link>
             </li>
-           
+                <li>
+                <Link to="/torneos" className="nav-link">
+                <i className="fa-solid fa-baseball"></i> Torneos
+              </Link>
+                </li>
+                <li>
+                  <hr className="dropdown-divider" />
+                </li>
+                <li>
+                  <a className="dropdown-item" href="#">
+                    Algo mas
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+
+
+
+
+
+
+
+
+
           </ul>
 
               <a

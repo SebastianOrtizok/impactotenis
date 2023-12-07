@@ -1,7 +1,8 @@
 import "./style_section3.css"
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 
-const TournamentList = () => {
+const Torneos = () => {
+  const [data, setData] = useState([])
   useEffect(() => {
     const fetchData = async () => {
       const url = 'https://ultimate-tennis1.p.rapidapi.com/tournament_list/atp/2023/atpgs';
@@ -15,7 +16,8 @@ const TournamentList = () => {
 
       try {
         const response = await fetch(url, options);
-        const result = await response.text();
+        const result = await response.json();
+        setData(result.Tournaments)
         console.log(result);
       } catch (error) {
         console.error(error);
@@ -26,10 +28,32 @@ const TournamentList = () => {
   }, []);
 
   return (
-    <div>
-      {/* Puedes agregar más contenido aquí si es necesario */}
-    </div>
+    <div className="section_3">
+    <table className="table table-striped table-hover">
+      <thead>
+        <th>Torneo</th>
+        <th>Superficie</th>
+        <th>Puntos</th>
+        <th>Fecha</th>
+        <th>Ubicacion</th>
+        <th>Dobles</th>
+        <th>Single</th>
+      </thead>
+      <tbody>
+        {data.map((torneo) => (
+          <tr key={torneo.id}>
+          <td>{torneo["Tournament Name"]}</td>
+            <td>{torneo.Surface}</td>
+            <td>{torneo.Timestamp}</td>
+            <td>{torneo["Total Prize Money"]}</td>
+            {/* <td>{torneo.Location.Winners.doubles}</td>
+            <td>{torneo.Location.Winners.single}</td> */}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
   );
 };
 
-export default TournamentList;
+export default Torneos;

@@ -6,7 +6,7 @@ import australia from './australia.jpg';
 import rolandGarros from './rolandGarros.jpg';
 import wimbledon from './wimbledon.webp';
 import usOpen from "./usopen.jpg"
-import estadisticas from "./estadisticas.jpg"
+import estadisticas from "./estadisticas.png"
 import Atropos from 'atropos/react';
 
 export const Principal3 = () => {
@@ -86,11 +86,9 @@ export const Principal3 = () => {
 
 
       <section>
-      <Atropos  
-			activeOffset={10}
-        shadowScale={20}>
+      <Atropos> 
         <h2 className="h2_section3">Jugador destacado</h2>
-        <img className="img_jugadorDestacado_section3" data-atropos-offset="3" src={djokovic} alt="Imagen de Novak Djokovic" />
+        <img className="img_jugadorDestacado_section3"  data-atropos-Offset = "20" src={djokovic} alt="Imagen de Novak Djokovic" />
         </Atropos>
       </section>
 
@@ -100,7 +98,7 @@ export const Principal3 = () => {
           <li>Total de títulos de Grand Slam ganados</li>
           <li>Cantidad de aces</li>
         </ul>
-        <img className="img-fluid" data-atropos-offset="10" src={estadisticas} alt="Estadisticas" />
+        <img className="img-fluid img_estadisticas_seccion3" data-atropos-offset="10" src={estadisticas} alt="Estadisticas" />
       </section>
     </div>
   );

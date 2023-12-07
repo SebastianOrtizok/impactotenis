@@ -6,6 +6,8 @@ import { EcommerceIndex } from './ecomerce/EcommerceIndex'
 import Ahorcado from "./Juegos/Ahorcado";
 import Youtube from "./Seccion2/Youtube"
 import { Seccion3 } from "./Seccion3/Seccion3";
+import RannkingATP from "./Seccion3/RankingATP";
+import Torneos from "./Seccion3/Torneos";
 
 
 
@@ -22,7 +24,8 @@ function App() {
 					<Route path="/ecommerce" element={<EcommerceIndex />} />
 					<Route path="/juegos" element={<Ahorcado/>} />
 					<Route path="/estadisticas" element={<Seccion3/>} />
-					<Route path="/youtube" element={<Youtube/>} /> 
+					<Route path="/ranking" element={<RannkingATP/>} /> 
+					<Route path="/torneos" element={<Torneos/>} /> 
 					{/* <Route path="/Catalog" element={<Catalog />} />
 					<Route path="/buscar" element={<BuscarProductos />} />
 					<Route path="/acces" element={<ObtenerAccesToken />} />
