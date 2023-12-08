@@ -1,6 +1,7 @@
 import { EcommerceIndex } from "./ecomerce/EcommerceIndex";
 import { Principal3 } from "./Seccion3/Principal3";
 import { ImagenTop } from "./Seccion1/ImagenTop";
+import { Footer } from "./footer/Footer";
 
 export const Principal = function () {
 	return (
@@ -54,6 +55,9 @@ export const Principal = function () {
 			</section>
 			<section>
 				<div className="principal_section5"></div>
+			</section>
+			<section>
+			<Footer />
 			</section>
 		</>
 	);

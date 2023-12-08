@@ -26,8 +26,8 @@ function App() {
 					<Route path="/estadisticas" element={<Seccion3/>} />
 					<Route path="/ranking" element={<RannkingATP/>} /> 
 					<Route path="/torneos" element={<Torneos/>} /> 
-					{/* <Route path="/Catalog" element={<Catalog />} />
-					<Route path="/buscar" element={<BuscarProductos />} />
+					<Route path="/youtube" element={<Youtube />} />
+					{/* <Route path="/buscar" element={<BuscarProductos />} />
 					<Route path="/acces" element={<ObtenerAccesToken />} />
 					<Route path="*" element={<NotFound />} />
 					<Route index element={<Mercadolibreapi />} /> */}

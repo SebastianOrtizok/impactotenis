@@ -36,18 +36,18 @@ const Torneos = () => {
         <th>Puntos</th>
         <th>Fecha</th>
         <th>Ubicacion</th>
-        <th>Dobles</th>
-        <th>Single</th>
+        {/* <th>Dobles</th>
+        <th>Single</th> */}
       </thead>
       <tbody>
-        {data.map((torneo) => (
-          <tr key={torneo.id}>
+        {data.map((torneo,index) => (
+          <tr key={index} >
           <td>{torneo["Tournament Name"]}</td>
             <td>{torneo.Surface}</td>
             <td>{torneo.Timestamp}</td>
             <td>{torneo["Total Prize Money"]}</td>
-            {/* <td>{torneo.Location.Winners.doubles}</td>
-            <td>{torneo.Location.Winners.single}</td> */}
+            {/* <td>{torneo.Winners.doubles}</td>
+            <td>{torneo.Winners.single}</td> */}
           </tr>
         ))}
       </tbody>
