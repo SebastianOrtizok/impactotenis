@@ -1,0 +1,286 @@
+* {
+	margin: 0;
+	padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(43,99,174);
+}
+
+
+.cancha {
+    position: absolute;
+    max-width: 430px;
+    top: 18px;
+    margin: auto;
+    z-index: -1;
+}
+
+#formulario_jugadores{
+	background-color: rgba(0, 31, 125, 0.645);
+    display: flex;
+    flex-direction: row;
+	flex-wrap: wrap;
+	border-radius: 10px;
+    width: 430px;
+    padding: 1rem;
+	align-items: center;
+}
+
+.nombreJugador1 {
+	color: aliceblue;
+}
+
+
+
+.nombreJugador2 {
+	color: aliceblue;
+}
+
+.servicio{
+    color: aliceblue;
+    padding: 0.3rem;
+    width: 200px;
+    font-size: 1.2rem;
+	
+}
+
+.sets{
+	color: aliceblue;
+	padding:0.3rem;
+	font-size: 1.3rem;
+}
+
+.container {
+	position: fixed;
+	display: flex;
+    flex-direction: column;
+    bottom: 54px;
+    background-color: rgba(0, 31, 125, 0.681);
+    width: 430px;
+	border-radius: 10px;
+}
+
+.titulos{
+		display: grid;
+		grid-template-columns: 10% 25% 30% 25% 10%;
+		background-color: rgb(198, 255, 177);
+		align-items: center;
+		padding: 0.3rem;
+}
+.tit_servicio{
+	text-align: center;
+}
+
+.jugador1 {
+    display: grid;
+	grid-template-columns: 10% 25% 30% 25% 10%;
+    background-color: rgb(198, 255, 177);
+    align-items: center;
+	height: 50px;
+}
+
+.muestra_nombre {
+	font-size: 1.5rem;
+	overflow: hidden;
+    white-space: nowrap;
+	margin: 0.5rem;
+}
+
+#nombreJugador1 {
+	width: 100%;
+	font-size: 1.5rem;
+	background-color: rgb(198, 255, 177);
+}
+#nombreJugador2 {
+	width: 100%;
+	font-size: 1.5rem;
+	margin-top: 0.5rem;
+	background-color: rgb(198, 255, 177);
+}
+
+.jugador2 {
+    display: grid;
+	grid-template-columns: 10% 25% 30% 25% 10%;
+    background-color: rgb(198, 255, 177);
+    align-items: center;
+	height: 50px;
+}
+
+.flex {
+	display: flex;
+	flex-direction: column;
+    margin: 0.5rem;
+	justify-items: center;
+    align-items: stretch;
+}
+
+
+.muestra_set{
+	color:red;
+	font-size: 1rem;
+	padding: 0.2rem;
+    background-color: rgba(0, 31, 125, 0.366);
+}
+
+div .muestra_puntos {
+	padding: 0 1rem;
+	font-size: 2rem;
+	height: auto;
+	background-color: rgb(198, 255, 177);
+}
+
+.flex img {
+    width: 40px;
+    height: 40px;
+    padding: 0.3rem;
+}
+
+button {
+	width: 220px;
+	padding: 0.5rem;
+	width: 150px;
+}
+
+.botones_puntos{
+    display: inline;
+    margin: 0 auto 0.5rem;
+}
+
+
+.informacion{
+	position: fixed;
+	 top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+	border-radius: 10px;
+	padding: 0.5rem;
+	color: aliceblue;
+	text-align: center;
+	font-size: 4rem;
+	margin-top: 2rem;
+	/* animation: desvanecer 3s linear 3s forwards; */
+}
+/* @keyframes desvanecer {
+	0% {
+	  opacity: 1;
+	}
+	100% {
+	  opacity: 0;
+	}
+  } */
+
+  .ladoAsp {
+    top: 197px;
+    left: 14px;
+}
+
+ #jugador1sacapar {
+	visibility: hidden;
+	position: absolute;
+	font-size: 2rem;
+	color: rgb(255, 0, 0);
+    width: 10%;
+    height: 10%;
+
+}
+
+.ladoAsi {
+    top: 107px;
+    left: 4px;
+}
+
+#jugador1sacaimpar {
+	visibility: hidden;
+	position: absolute;
+	font-size: 2rem;
+	color: rgb(255, 0, 0);
+    width: 10%;
+    height: 10%;
+}
+
+.ladoBsp {
+    top: 102px;
+    left: 355px;
+}
+
+#jugador2sacapar {
+	position: absolute;
+	visibility: hidden;
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+	width: 10%;
+    height: 10%;
+}
+
+.ladoBsi {
+    top: 177px;
+    left: 355px;
+}
+
+#jugador2sacaimpar {
+	position: absolute;
+	visibility: hidden;
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+    width: 10%;
+    height: 10%;
+}
+
+.ladoAdp {
+	top: 195px;
+    left: 90px;
+}
+
+#jugador1devuelvepar {
+	visibility: hidden;
+	position: absolute;
+	font-size: 2rem;
+	color: rgb(255, 0, 0);
+    width: 10%;
+    height: 10%;
+
+}
+
+.ladoAdi {
+	top: 98px;
+    left: 87px;
+}
+
+#jugador1devuelveimpar {
+	visibility: hidden;
+	position: absolute;
+	font-size: 2rem;
+	color: rgb(255, 0, 0);
+    width: 10%;
+    height: 10%;
+}
+
+.ladoBdp {
+    top: 104px;
+    left: 298px;
+}
+
+#jugador2devuelvepar {
+	visibility: hidden;
+	position: absolute;
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+    width: 10%;
+    height: 10%;
+}
+
+.ladoBdi {
+    top: 201px;
+    left: 284px;
+}
+
+#jugador2devuelveimpar {
+    visibility: hidden;
+	position: absolute;
+	font-size: 2rem;
+	color: rgb(255, 255, 255);
+    width: 10%;
+    height: 10%;
+}

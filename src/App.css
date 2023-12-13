@@ -41,6 +41,11 @@
   }
 */
 
+.principal_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
 .my-atropos {
     width: 320px;
     height: 160px;

@@ -6,7 +6,7 @@ import { Footer } from "./footer/Footer";
 export const Principal = function () {
 	return (
 		<>
-			<section>
+		<section>
 
 				<div className="principal_section1">
 					<ImagenTop/>
@@ -59,6 +59,6 @@ export const Principal = function () {
 			<section>
 			<Footer />
 			</section>
-		</>
+			</>
 	);
 };

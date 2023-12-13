@@ -1,29 +1,31 @@
 import "./style_section3.css"
 import { useEffect, useState } from "react";
-import InfoJugador from "./InfoJugador";
+// import InfoJugador from "./InfoJugador";
 
 const RannkingATP = () => {
-	const url = "https://ultimate-tennis1.p.rapidapi.com/live_leaderboard/50";
+	const url = "https://impactotenis.onrender.com/sql_consultas";
 
-	const opciones = {
-		method: "GET",
-		headers: {
-			"X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
-			"X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
-		},
-	};
+	// const opciones = {
+	// 	method: "GET",
+	// 	headers: {
+	// 		"X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
+	// 		"X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
+	// 	},
+	// };
 	const [data, setData] = useState([]);
-    const [selectedPlayerId, setSelectedPlayerId] = useState(null);
+  //   const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
 	useEffect(() => {
 		const obtenerDatos = async () => {
 			try {
-				const respuesta = await fetch(url, opciones);
-				const resultado = await respuesta.json();
-				setData(resultado.data.slice(0, 10));
+				const respuesta = await fetch(url);
+        console.log(respuesta);
+				const resultado = await respuesta.text();
+				setData(resultado.data);
 				console.log(resultado.data);
 			} catch (error) {
-				console.error(error);
+        console.error("Error al obtener datos:", error);
+        console.log("Detalles del error respuesta:", error.response);
 			}
 		};
 
@@ -41,10 +43,12 @@ const RannkingATP = () => {
         <div className="section_3">
         <table className="table table-striped table-hover">
           <thead>
+          <tr>
             <th>Ranking</th>
             <th>Nombre</th>
             <th>Puntos</th>
             <th>Edad</th>
+            </tr>
           </thead>
           <tbody>
             {data.map((ranking, index) => (

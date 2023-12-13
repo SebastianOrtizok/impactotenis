@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Contador Tenis</title>
+	</head>
+	<body>
+
+		<!-- formulario carga nombre de jugadores -->
+		<div id="formulario_jugadores">
+			<div class="nombres">
+			<input type="text" id="nombreJugador1" placeholder="Nombre Jugador 1:" />
+			<input type="text" id="nombreJugador2" placeholder="Nombre Jugador 2:"/>
+		</div>
+		<div class="servicio">
+			<div class="servicio sorteo">
+				<input type="radio" id="saca1" name="jugadorSaca" value="jugador1" />
+				<label for="saca1">Saca Jugador 1</label>
+			</div>
+			<div class="servicio sorteo">
+				<input type="radio" id="saca2" name="jugadorSaca" value="jugador2" />
+				<label for="saca2">Saca Jugador 2</label>
+			</div>
+		</div>
+			<div class="sets">
+				<input type="radio" id="sets3" name="sets" value="3" />
+				<label for="saca2">3 sets</label>
+				<input type="radio" id="sets5" name="sets" value="5" />
+				<label for="saca2">5 sets</label>
+			</div>
+			<button class="jugadorunopunto" id="cargarnombres">Cargar Nombres</button>
+		</div>
+		<!-- Fin formulario carga nombre de jugadores -->
+		<div class="container">
+			<div class="flex">
+				<!-- Titulos -->
+				<div class="titulos">
+					<div class="tit_servicio">Serv</div>
+					<div class="tit_nombre">Nombre</div>
+					<div class="tit_set">Set</div>
+					<div class="tit_puntos">Game Puntos</div>
+					<div class="tit_tiebreak">TB</div>
+				</div>
+				<!-- fin titulos -->
+				<div class="jugador1">
+					<img
+						class="muestra_puntos"
+						id="muestra_servicio_1"
+						src="/src/Juegos/img/servicio.jpg"
+						alt="service1 img"
+					/>
+					<div class="muestra_nombre" id="muestra_nombre_1"></div>
+					<div class="muestra_set" id="muestra_set_jugador1"></div>
+					<div class="muestra_puntos" id="muestra_resultado_punto_1"></div>
+					<div class="muestra_tiebreak" id="muestra_tiebreak_1"></div>
+				</div>
+				<div class="jugador2">
+					<img
+						class="muestra_puntos"
+						id="muestra_servicio_2"
+						src="/src/Juegos/img/servicio.jpg"
+						alt="service2 img"
+					/>
+					<div class="muestra_nombre" id="muestra_nombre_2"></div>
+					<div class="muestra_set" id="muestra_set_jugador2"></div>
+					<div class="muestra_puntos" id="muestra_resultado_punto_2"></div>
+					<div class="muestra_tiebreak" id="muestra_tiebreak_2"></div>
+				</div>
+			</div>
+			<div class="botones_puntos">
+				<button class="jugadorunopunto" id="punto_jugador_1">
+					Punto jugador 1
+				</button>
+				<button class="jugadordospunto" id="punto_jugador_2">
+					Punto jugador 2
+				</button>
+			</div>
+		</div>
+		<div class="informacion" id="informacion"></div>
+
+		<audio id="audioGameSetAndMatch" preload="auto">
+			<source src="audio/gameSetAndMatch.m4a" type="audio/ogg" />
+		</audio>
+
+		<audio id="audioTiebreak" preload="auto">
+			<source src="audio/tieBreak.m4a" type="audio/ogg" />
+		</audio>
+
+		<audio id="audioMatchPoint" preload="auto">
+			<source src="audio/matchPoint.m4a" type="audio/mpeg" />
+		</audio>
+		
+		<audio id="audioSetPoint" preload="auto">
+			<source src="audio/setPoint.m4a" type="audio/mpeg" />
+		</audio>
+
+		<audio id="audioGame" preload="auto">
+			<source src="audio/matchPoint.m4a" type="audio/mpeg" />
+		</audio>
+		<div class="cancha">
+		<img src="/src/Juegos/img/blue-tennis-court.jpg" class="cancha">
+			<!-- <img src="img/jugador1sacando.png" class="ladoAsp" id="jugador1sacapar"  alt=""> -->
+			<span class="ladoAsp" id="jugador1sacapar"> </span>
+			<!-- <img src="img/jugador1sacando.png" class="ladoAsi" id="jugador1sacaimpar"  alt=""> -->
+			<span class="ladoAsi" id="jugador1sacaimpar" > </span>
+			<!-- <img src="img/jugadordevolviendo.png" class="ladoAdp" id="jugador1devuelvepar"  alt=""> -->
+			<span class="ladoAdp" id="jugador1devuelvepar" > </span>
+			<!-- <img src="img/jugadordevolviendo.png" class="ladoAdi" id="jugador1devuelveimpar"  alt=""> -->
+			<span class="ladoAdi" id="jugador1devuelveimpar" > </span>
+			<!-- <img src="img/jugador2sacando.png" class="ladoBsp" id="jugador2sacapar"  alt=""> -->
+			<span class="ladoBsp" id="jugador2sacapar" > </span>
+			<!-- <img src="img/jugador2sacando.png" class="ladoBsi" id="jugador2sacaimpar"  alt=""> -->
+			<span class="ladoBsi" id="jugador2sacaimpar"> </span>
+			<!-- <img src="img/jugadordevolviendo.png" class="ladoBdp" id="jugador2devuelvepar"  alt=""> -->
+			<span class="ladoBdp" id="jugador2devuelvepar"> </span>
+			<!-- <img src="img/jugadordevolviendo.png" class="ladoBdi" id="jugador2devuelveimpar"  alt=""> -->
+			<span class="ladoBdi" id="jugador2devuelveimpar"> </span>
+
+		</img>
+	</div>
+		<script src="contador.js"></script>
+	</body>
+</html>

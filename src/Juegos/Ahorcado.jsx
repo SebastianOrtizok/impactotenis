@@ -1,6 +1,13 @@
 import { useState, useEffect  } from 'react';
 import './ahorcado.css'; 
-import './img/ahorcado7.gif'
+import  ahorcado1 from './img/ahorcado7.gif'
+import  ahorcado2 from './img/ahorcado6.gif'
+import  ahorcado3 from './img/ahorcado5.gif'
+import  ahorcado4 from './img/ahorcado4.gif'
+import  ahorcado5 from './img/ahorcado3.gif'
+import  ahorcado6 from './img/ahorcado2.gif'
+import  ahorcado7 from './img/ahorcado1.gif'
+
 
 let letra = "";
 let palabraescondida = [];
@@ -10,9 +17,11 @@ let letraIncorrecta = "";
 let letrasusadas=""
 let letrausada = false;
 let index = 0;
-let vida = 7;
+let vida = 6;
 let acertadas = [];
 var palabraaencontrar = "";
+let ahorcado = [ahorcado7,ahorcado6,ahorcado5,ahorcado4,ahorcado3,
+  ahorcado2,ahorcado1]
 let palabraAleatoria = [
   "vilas",
   "clerc",
@@ -47,7 +56,6 @@ const Ahorcado = () => {
   const [mostrarBotonReload, setMostrarBotonReload] = useState(false);
   const [teclado, setTeclado] = useState(true)
   const [MensajePrincipal, setMensajePrincipal] = useState()
-
 
     //Si da igual entonces la palabra ya se encontró
     let letraok = false;
@@ -103,8 +111,7 @@ const Ahorcado = () => {
           <h3 className='titulo_ahorcado'>Ahorcado</h3>
           <div className="informacion">
             <div className="infoimage">
-            <img id="image" src={`/src/Juegos/img/ahorcado${vida}.gif`} alt="Imagen de información" />
-
+            <img id="image" src={ahorcado[vida]} alt="Imagen de información" />
             </div>
             <div className="info1">
               <p className="muestrainfo" id="parrafos"></p>
