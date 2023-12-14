@@ -1,31 +1,30 @@
 import "./style_section3.css"
 import { useEffect, useState } from "react";
-// import InfoJugador from "./InfoJugador";
+import InfoJugador from "./InfoJugador";
 
 const RannkingATP = () => {
-	const url = "https://impactotenis.onrender.com/sql_consultas";
+	const url = "https://impactotenis.onrender.com/obtenerDatosAPI";
 
-	// const opciones = {
-	// 	method: "GET",
-	// 	headers: {
-	// 		"X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
-	// 		"X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
-	// 	},
-	// };
+	const opciones = {
+		method: "GET",
+		headers: {
+			// "X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
+			// "X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
+		},
+	};
 	const [data, setData] = useState([]);
-  //   const [selectedPlayerId, setSelectedPlayerId] = useState(null);
+    const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
 	useEffect(() => {
 		const obtenerDatos = async () => {
 			try {
-				const respuesta = await fetch(url);
-        console.log(respuesta);
-				const resultado = await respuesta.text();
+				const respuesta = await fetch(url, opciones);
+				const resultado = await respuesta.json();
 				setData(resultado.data);
 				console.log(resultado.data);
 			} catch (error) {
         console.error("Error al obtener datos:", error);
-        console.log("Detalles del error respuesta:", error.response);
+        console.log("Detalles dela respuesta:", error.response);
 			}
 		};
 
