@@ -20,8 +20,8 @@ const RannkingATP = () => {
 			try {
 				const respuesta = await fetch(url);
 				const resultado = await respuesta.json();
-				setData(resultado.data);
-				console.log(resultado.data);
+				setData(resultado);
+				console.log(resultado);
 			} catch (error) {
 				console.error("Error al obtener datos:", error);
 				console.log("Detalles dela respuesta:", error.response);
