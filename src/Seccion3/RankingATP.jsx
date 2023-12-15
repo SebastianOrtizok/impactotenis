@@ -1,6 +1,6 @@
-import "./style_section3.css"
+import "./style_section3.css";
 import { useEffect, useState } from "react";
-import {InfoJugador} from "./InfoJugador"
+import { InfoJugador } from "./InfoJugador";
 
 const RannkingATP = () => {
 	const url = "https://impactotenis.onrender.com/obtenerDatosAPI";
@@ -13,7 +13,7 @@ const RannkingATP = () => {
 		},
 	};
 	const [data, setData] = useState([]);
-    const [selectedPlayerId, setSelectedPlayerId] = useState(null);
+	const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
 	useEffect(() => {
 		const obtenerDatos = async () => {
@@ -23,47 +23,54 @@ const RannkingATP = () => {
 				setData(resultado.data);
 				console.log(resultado.data);
 			} catch (error) {
-        console.error("Error al obtener datos:", error);
-        console.log("Detalles dela respuesta:", error.response);
+				console.error("Error al obtener datos:", error);
+				console.log("Detalles dela respuesta:", error.response);
 			}
 		};
 
 		obtenerDatos();
 
 		// Nota: Si utilizas dependencias en useEffect, agrégales a este arreglo para evitar problemas de rendimiento o comportamiento inesperado.
-	}, []);
+	}, [url, opciones]);
 
-    const handlePlayerClick = (playerId) => {
-        setSelectedPlayerId(playerId);
-        console.log(selectedPlayerId)
-      };
+	const handlePlayerClick = (playerId) => {
+		setSelectedPlayerId(playerId);
+		console.log(selectedPlayerId);
+	};
 
 	return (
-        <div className="section_3">
-        <table className="table table-striped table-hover">
-          <thead>
-          <tr>
-            <th>Ranking</th>
-            <th>Nombre</th>
-            <th>Puntos</th>
-            <th>Edad</th>
-            </tr>
-          </thead>
-          <tbody>
-            {data.map((ranking, index) => (
-              <tr key={index} onClick={() => handlePlayerClick(ranking.id)} style={{ cursor: "pointer" }}>
-                <td>{ranking.Rank}</td>
-                <td>{ranking.Name}</td>
-                <td>{ranking.Points}</td>
-                <td>{ranking.Age}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-        {selectedPlayerId && (
-          <InfoJugador playerId={selectedPlayerId} onClose={() => setSelectedPlayerId(null)} />
-        )}
-      </div>
+		<div className="section_3">
+			<table className="table table-striped table-hover">
+				<thead>
+					<tr>
+						<th>Ranking</th>
+						<th>Nombre</th>
+						<th>Puntos</th>
+						<th>Edad</th>
+					</tr>
+				</thead>
+				<tbody>
+					{data.map((ranking, index) => (
+						<tr
+							key={index}
+							onClick={() => handlePlayerClick(ranking.id)}
+							style={{ cursor: "pointer" }}
+						>
+							<td>{ranking.Rank}</td>
+							<td>{ranking.Name}</td>
+							<td>{ranking.Points}</td>
+							<td>{ranking.Age}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+			{selectedPlayerId && (
+				<InfoJugador
+					playerId={selectedPlayerId}
+					onClose={() => setSelectedPlayerId(null)}
+				/>
+			)}
+		</div>
 	);
 };
 
