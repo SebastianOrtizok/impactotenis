@@ -53,7 +53,7 @@ const RannkingATP = () => {
 					{data.map((ranking, index) => (
 						<tr
 							key={index}
-							onClick={() => handlePlayerClick(ranking.id)}
+							onClick={() => handlePlayerClick(ranking.player_id)}
 							style={{ cursor: "pointer" }}
 						>
 							<td>{ranking.Rank}</td>
