@@ -5,20 +5,20 @@ import { InfoJugador } from "./InfoJugador";
 const RannkingATP = () => {
 	const url = "https://impactotenis.onrender.com/obtenerDatosAPI";
 
-	const opciones = {
-		method: "GET",
-		headers: {
-			// "X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
-			// "X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
-		},
-	};
+	// const opciones = {
+	// 	method: "GET",
+	// 	headers: {
+	// 		"X-RapidAPI-Key": "f54b2a81dbmshbcc7d7a45a8cf74p1ab5c6jsn575020ac488a",
+	// 		"X-RapidAPI-Host": "ultimate-tennis1.p.rapidapi.com",
+	// 	},
+	// };
 	const [data, setData] = useState([]);
 	const [selectedPlayerId, setSelectedPlayerId] = useState(null);
 
 	useEffect(() => {
 		const obtenerDatos = async () => {
 			try {
-				const respuesta = await fetch(url, opciones);
+				const respuesta = await fetch(url);
 				const resultado = await respuesta.json();
 				setData(resultado.data);
 				console.log(resultado.data);
@@ -31,7 +31,7 @@ const RannkingATP = () => {
 		obtenerDatos();
 
 		// Nota: Si utilizas dependencias en useEffect, agrégales a este arreglo para evitar problemas de rendimiento o comportamiento inesperado.
-	}, [url, opciones]);
+	}, [url]);
 
 	const handlePlayerClick = (playerId) => {
 		setSelectedPlayerId(playerId);
