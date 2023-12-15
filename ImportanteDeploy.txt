@@ -1,8 +1,0 @@
-https://www.youtube.com/watch?v=OUsC13AEiUQ
-Y los scripts de ejecución:
-"predeploy": "npm run build",
-"deploy": "gh-pages -d build"
-
-Correr los scripts por orden:
-- npm run build
-- npm run deploy
