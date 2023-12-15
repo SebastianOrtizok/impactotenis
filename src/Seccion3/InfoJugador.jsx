@@ -1,7 +1,7 @@
 import "./style_section3.css"
 import { useEffect, useState } from "react";
 
-const InfoJugador = ({ playerId, onClose }) => {
+export const InfoJugador = ({ playerId, onClose }) => {
   const [infoJugador, setInfoJugador] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
 

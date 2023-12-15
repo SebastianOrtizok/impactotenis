@@ -1,6 +1,6 @@
 import "./style_section3.css"
 import { useEffect, useState } from "react";
-import InfoJugador from "./InfoJugador";
+import {InfoJugador} from "./InfoJugador"
 
 const RannkingATP = () => {
 	const url = "https://impactotenis.onrender.com/obtenerDatosAPI";
